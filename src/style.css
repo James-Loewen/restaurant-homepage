@@ -38,9 +38,11 @@ ol, ul {
 /* End reset */
 
 @font-face {
-  font-family: "Lobster";
-  src: url("./Lobster-Regular.ttf");
+  font-family: "Lato Light Italic";
+  /* font-style: italic; */
+  src: url("./Lato-LightItalic.ttf");
 }
+
 
 @font-face {
   font-family: "Fredoka One";
@@ -48,7 +50,11 @@ ol, ul {
 }
 
 :root {
-  --fc-black: #444;
+  --fc-black: #293241;
+  --accent-clr: #EE6C4D;
+  --brand-clr: #98C1D9;
+  --brand-clr-light: #E0FBFC;
+  --brand-clr-dark: #3D5A80;
 }
 
 body {
@@ -59,12 +65,22 @@ body {
   display: flex;
 }
 
+.top-bar {
+  font-family: "Lato Light Italic";
+  padding: .5rem 2em;
+  background-color: var(--fc-black);
+  color: #FFF;
+  justify-content: space-between;
+}
+
 main {
   flex-direction: column;
   gap: 1.5em;
   margin: auto;
+  padding-bottom: 2rem;
   max-width: 70%;
   align-items: center;
+  /* border: 2px solid var(--brand-clr-dark); */
 }
 
 .nav-container {
@@ -72,9 +88,9 @@ main {
 }
 
 .nav {
-  margin-top: .5rem;
+  /* margin-top: .5rem; */
   justify-content: center;
-  background-color: floralwhite;
+  background-color: var(--brand-clr-light);
 }
 
 .nav li button {
@@ -82,7 +98,7 @@ main {
   font-size: 1.25rem;
   font-family: "Fredoka One";
   color: var(--fc-black);
-  background-color: FloralWhite;
+  background-color: var(--brand-clr-light);
   padding: 1rem;
   border: none;
 }
@@ -90,12 +106,13 @@ main {
 .nav li button:hover,
 .nav li button.active {
   /* background-color: lightsalmon; */
-  background-color: hsl(17, 100%, 80%);
+  background-color: var(--accent-clr);
   transform: scale(1.1);
   /* border-radius: .25rem; */
 }
 
 #content {
+  width: 100%;
   flex-direction: column;
   gap: 2em;
   align-items: center;
@@ -108,7 +125,7 @@ h1 {
   line-height: 1.2;
 }
 
-#testies-heading {
+#sub-heading {
   font-family: "Fredoka One";
   font-size: 1.2rem;
   max-width: 60%;
@@ -126,7 +143,7 @@ h1 {
   gap: 1rem;
   justify-content: center;
   align-items: center;
-  max-width: 50%;
+  width: 50%;
   /* height: 250px; */
   border: 1rem solid var(--fc-black);
 }
@@ -144,4 +161,19 @@ h1 {
 
 .credit::before {
   content: "— ";
+}
+
+.menu-item {
+  margin: 0;
+  font-family: "Fredoka One";
+  font-size: 1.75rem;
+}
+
+.menu-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.menu-description {
+
 }
